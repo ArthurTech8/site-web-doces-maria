@@ -1,0 +1,11 @@
+{
+  "produtos": [
+    { "produtoId": "1", "nome": "Cupcake", "precoVenda": 8, "precoCusto": 4.5 }
+  ],
+  "gastosFixos": [
+    { "id": "1", "descricao": "Internet", "valor": 120 },
+    { "id": "2", "descricao": "Luz", "valor": 230}, 
+    { "id": "3", "descricao": "Água", "valor": 90}
+  ],
+  "vendas": []
+}
