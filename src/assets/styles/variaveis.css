@@ -1,0 +1,46 @@
+:root {
+  /* Cores da marca */
+  --cor-primaria: #4f46e5;
+  --cor-primaria-clara: #e0e7ff;
+  --cor-primaria-escura: #3730a3;
+
+  /* Cores neutras */
+  --cor-fundo: #f4f6f9;
+  --cor-superficie: #ffffff;
+  --cor-superficie-suave: #f9fafb;
+  --cor-borda: #e5e7eb;
+  --cor-borda-suave: #f1f2f4;
+  --cor-texto: #1f2937;
+  --cor-texto-suave: #6b7280;
+  --cor-texto-apagado: #9ca3af;
+
+  /* Cores de status */
+  --cor-sucesso: #166534;
+  --cor-sucesso-fundo: #dcfce7;
+  --cor-alerta: #854d0e;
+  --cor-alerta-fundo: #fef9c3;
+  --cor-perigo: #991b1b;
+  --cor-perigo-fundo: #fee2e2;
+  --cor-perigo-borda: #dc2626;
+
+  /* Tipografia */
+  --fonte-base: 'Segoe UI', Roboto, Arial, sans-serif;
+  --texto-xs: 12px;
+  --texto-sm: 13px;
+  --texto-md: 14px;
+  --texto-xl: 24px;
+
+  /* Espaçamentos */
+  --espaco-1: 4px;
+  --espaco-2: 8px;
+  --espaco-3: 12px;
+  --espaco-4: 16px;
+  --espaco-6: 24px;
+  --espaco-8: 32px;
+
+  /* Bordas e sombras */
+  --raio-sm: 6px;
+  --raio-md: 8px;
+  --raio-pilula: 999px;
+  --sombra-card: 0 1px 3px rgba(0, 0, 0, 0.06);
+}

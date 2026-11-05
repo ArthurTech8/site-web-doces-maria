@@ -1,42 +1,19 @@
-# .
+# Doces da Maria
 
-This template should help get you started developing with Vue 3 in Vite.
+Sistema web de controle de vendas e financeiro de uma loja de doces: cadastro de produtos com preço de venda e custo, registro de vendas e dashboard com faturamento, gastos fixos e lucro.
 
-## Recommended IDE Setup
-
-[VS Code](https://code.visualstudio.com/) + [Vue (Official)](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
-
-## Recommended Browser Setup
-
-- Chromium-based browsers (Chrome, Edge, Brave, etc.):
-  - [Vue.js devtools](https://chromewebstore.google.com/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)
-  - [Turn on Custom Object Formatter in Chrome DevTools](http://bit.ly/object-formatters)
-- Firefox:
-  - [Vue.js devtools](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
-  - [Turn on Custom Object Formatter in Firefox DevTools](https://fxdx.dev/firefox-devtools-custom-object-formatters/)
-
-## Type Support for `.vue` Imports in TS
-
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vite.dev/config/).
-
-## Project Setup
+## Como rodar
 
 ```sh
 npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
 npm run dev
 ```
 
-### Type-Check, Compile and Minify for Production
+- Aplicação: http://localhost:5173
+- API (json-server): http://localhost:3000
 
-```sh
-npm run build
-```
+Os dados ficam no arquivo `db.json`.
+
+## Antes de alterar o código
+
+Leia o [ARQUITETURA.md](ARQUITETURA.md): ele descreve a estrutura de pastas, as regras de cada camada, as convenções de nomes e os checklists para criar novas telas e entidades.

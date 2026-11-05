@@ -1,11 +1,46 @@
 {
   "produtos": [
-    { "produtoId": "1", "nome": "Cupcake", "precoVenda": 8, "precoCusto": 4.5 }
+    {
+      "Id": "1",
+      "nome": "Cupcake",
+      "precoVenda": 8,
+      "precoCusto": 4.5
+    }
   ],
   "gastosFixos": [
-    { "id": "1", "descricao": "Internet", "valor": 120 },
-    { "id": "2", "descricao": "Luz", "valor": 230}, 
-    { "id": "3", "descricao": "Água", "valor": 90}
+    {
+      "id": "1",
+      "descricao": "Internet",
+      "valor": 120
+    },
+    {
+      "id": "2",
+      "descricao": "Luz",
+      "valor": 230
+    },
+    {
+      "id": "3",
+      "descricao": "Água",
+      "valor": 90
+    }
   ],
-  "vendas": []
+  "vendas": [
+    {
+      "id": "1",
+      "data": "2026-11-05T15:00:00.000Z",
+      "itens": [
+        {
+          "produto": {
+            "id": "1",
+            "nome": "Cupcake",
+            "precoVenda": 8,
+            "precoCusto": 4.5
+          },
+          "quantidade": 10
+        }
+      ],
+      "total": 80,
+      "custoTotal": 45
+    }
+  ]
 }
