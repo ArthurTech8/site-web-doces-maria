@@ -1,7 +1,7 @@
 {
   "produtos": [
     {
-      "Id": "1",
+      "id": "1",
       "nome": "Cupcake",
       "precoVenda": 8,
       "precoCusto": 4.5

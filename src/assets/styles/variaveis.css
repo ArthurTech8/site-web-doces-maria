@@ -13,6 +13,7 @@
   --cor-texto: #1f2937;
   --cor-texto-suave: #6b7280;
   --cor-texto-apagado: #9ca3af;
+  --cor-texto-invertido: #ffffff;
 
   /* Cores de status */
   --cor-sucesso: #166534;
@@ -28,6 +29,7 @@
   --texto-xs: 12px;
   --texto-sm: 13px;
   --texto-md: 14px;
+  --texto-lg: 16px;
   --texto-xl: 24px;
 
   /* Espaçamentos */
@@ -43,4 +45,6 @@
   --raio-md: 8px;
   --raio-pilula: 999px;
   --sombra-card: 0 1px 3px rgba(0, 0, 0, 0.06);
+  --sombra-modal: 0 20px 40px rgba(0, 0, 0, 0.18);
+  --fundo-modal: rgba(17, 24, 39, 0.45);
 }

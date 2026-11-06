@@ -1,0 +1,35 @@
+/* Estilos do componente ModalConfirmacao.vue (importado com <style scoped src>) */
+
+.modal {
+  width: min(420px, calc(100% - 32px));
+  padding: var(--espaco-6);
+  border: none;
+  border-radius: var(--raio-md);
+  background-color: var(--cor-superficie);
+  color: var(--cor-texto);
+  box-shadow: var(--sombra-modal);
+}
+
+.modal::backdrop {
+  background-color: var(--fundo-modal);
+}
+
+.modal-titulo {
+  margin: 0 0 var(--espaco-2);
+  font-size: var(--texto-lg);
+  font-weight: 600;
+}
+
+.modal-mensagem {
+  margin: 0;
+  color: var(--cor-texto-suave);
+  font-size: var(--texto-md);
+  line-height: 1.5;
+}
+
+.modal-acoes {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--espaco-2);
+  margin-top: var(--espaco-6);
+}

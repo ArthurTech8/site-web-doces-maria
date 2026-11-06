@@ -5,12 +5,15 @@ export function somar<T>(lista: T[], valor: (item: T) => number): number {
   return lista.reduce((soma, item) => soma + valor(item), 0)
 }
 
-export function calcularLucroUnitario(produto: Produto): number {
+// Só os preços de um produto. Permite calcular antes do produto ser salvo (ex.: no formulário)
+type Precos = Pick<Produto, 'precoVenda' | 'precoCusto'>
+
+export function calcularLucroUnitario(produto: Precos): number {
   return produto.precoVenda - produto.precoCusto
 }
 
 // Percentual do preço de venda que é lucro
-export function calcularMargem(produto: Produto): number {
+export function calcularMargem(produto: Precos): number {
   if (produto.precoVenda === 0) return 0
   return (calcularLucroUnitario(produto) / produto.precoVenda) * 100
 }

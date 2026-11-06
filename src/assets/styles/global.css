@@ -72,6 +72,167 @@ body {
   box-shadow: var(--sombra-card);
 }
 
+.card + .card {
+  margin-top: var(--espaco-6);
+}
+
+/* Card com conteúdo interno (formulários, resumos) */
+.card-corpo {
+  padding: var(--espaco-6);
+}
+
+.card-titulo {
+  margin: 0 0 var(--espaco-4);
+  font-size: var(--texto-lg);
+  font-weight: 600;
+}
+
+/* Formulários */
+.formulario-grade {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: var(--espaco-4);
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.campo-rotulo {
+  color: var(--cor-texto-suave);
+  font-size: var(--texto-sm);
+  font-weight: 600;
+}
+
+.campo-entrada {
+  padding: 10px var(--espaco-3);
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--raio-sm);
+  background-color: var(--cor-superficie);
+  color: var(--cor-texto);
+  font: inherit;
+  font-size: var(--texto-md);
+  transition:
+    border-color 0.15s,
+    box-shadow 0.15s;
+}
+
+.campo-entrada:focus {
+  outline: none;
+  border-color: var(--cor-primaria);
+  box-shadow: 0 0 0 3px var(--cor-primaria-clara);
+}
+
+.campo-invalido .campo-entrada {
+  border-color: var(--cor-perigo-borda);
+}
+
+.campo-erro {
+  color: var(--cor-perigo);
+  font-size: var(--texto-xs);
+}
+
+.formulario-rodape {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--espaco-4);
+  margin-top: var(--espaco-6);
+}
+
+.formulario-previa {
+  margin: 0;
+  font-size: var(--texto-md);
+}
+
+.formulario-acoes {
+  display: flex;
+  gap: var(--espaco-2);
+  margin-left: auto;
+}
+
+/* Botões */
+.botao {
+  padding: 10px var(--espaco-4);
+  border: 1px solid transparent;
+  border-radius: var(--raio-sm);
+  font: inherit;
+  font-size: var(--texto-md);
+  font-weight: 600;
+  white-space: nowrap;
+  cursor: pointer;
+  transition:
+    background-color 0.15s,
+    border-color 0.15s,
+    color 0.15s;
+}
+
+.botao:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.botao:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px var(--cor-primaria-clara);
+}
+
+.botao-primario {
+  background-color: var(--cor-primaria);
+  color: var(--cor-texto-invertido);
+}
+
+.botao-primario:hover:not(:disabled) {
+  background-color: var(--cor-primaria-escura);
+}
+
+.botao-secundario {
+  border-color: var(--cor-borda);
+  background-color: var(--cor-superficie);
+  color: var(--cor-texto);
+}
+
+.botao-secundario:hover:not(:disabled) {
+  background-color: var(--cor-superficie-suave);
+}
+
+.botao-perigo {
+  background-color: var(--cor-perigo-borda);
+  color: var(--cor-texto-invertido);
+}
+
+.botao-perigo:hover:not(:disabled) {
+  background-color: var(--cor-perigo);
+}
+
+/* Botão discreto, usado dentro de tabelas */
+.botao-texto {
+  padding: 6px 10px;
+  background-color: transparent;
+  color: var(--cor-primaria);
+  font-size: var(--texto-sm);
+}
+
+.botao-texto:hover:not(:disabled) {
+  background-color: var(--cor-primaria-clara);
+}
+
+.botao-texto-perigo {
+  color: var(--cor-perigo);
+}
+
+.botao-texto-perigo:hover:not(:disabled) {
+  background-color: var(--cor-perigo-fundo);
+}
+
+.grupo-acoes {
+  display: inline-flex;
+  gap: var(--espaco-1);
+}
+
 /*
   Tabela em grid
   Cada tela define as colunas na variável --colunas, por exemplo:
@@ -136,6 +297,15 @@ body {
   color: var(--cor-texto-suave);
 }
 
+.texto-aviso {
+  color: var(--cor-alerta);
+  font-weight: 600;
+}
+
+.texto-direita {
+  text-align: right;
+}
+
 /* Badges */
 .badge {
   display: inline-block;
@@ -166,6 +336,22 @@ body {
 @media (max-width: 720px) {
   .pagina {
     padding: var(--espaco-4);
+  }
+
+  .card-corpo {
+    padding: var(--espaco-4);
+  }
+
+  .formulario-grade {
+    grid-template-columns: 1fr;
+  }
+
+  .formulario-acoes {
+    width: 100%;
+  }
+
+  .formulario-acoes .botao {
+    flex: 1;
   }
 
   .tabela-cabecalho {
