@@ -6,6 +6,41 @@
       "precoVenda": 8,
       "precoCusto": 4.5,
       "ativo": true
+    },
+    {
+      "nome": "pasjdamspasjdamspasjdamspasjdamspasjdamspasjdamspasjdamspasj",
+      "precoVenda": 2.99999999999,
+      "precoCusto": 89999,
+      "ativo": false,
+      "id": "WqvOfCCMW-s"
+    },
+    {
+      "nome": "w",
+      "precoVenda": 39.9,
+      "precoCusto": 23,
+      "ativo": true,
+      "id": "jet7FwxEMe4"
+    },
+    {
+      "nome": "ada",
+      "precoVenda": 5.98,
+      "precoCusto": 1,
+      "ativo": true,
+      "id": "IwLmnYGWfBc"
+    },
+    {
+      "nome": "asdasd",
+      "precoVenda": 99.99,
+      "precoCusto": 123,
+      "ativo": true,
+      "id": "OF3BfwLF0f0"
+    },
+    {
+      "nome": "asdas",
+      "precoVenda": 9.89,
+      "precoCusto": 1,
+      "ativo": true,
+      "id": "RS2JzcbH514"
     }
   ],
   "gastosFixos": [
@@ -26,6 +61,12 @@
       "descricao": "Água",
       "valor": 90,
       "ativo": true
+    },
+    {
+      "descricao": "aluguel",
+      "valor": 900,
+      "ativo": true,
+      "id": "9_2lHHCS0NU"
     }
   ],
   "vendas": [
@@ -45,7 +86,7 @@
       ],
       "total": 80,
       "custoTotal": 45,
-      "ativo": true
+      "ativo": false
     },
     {
       "data": "2026-11-06T00:22:19.055Z",
@@ -82,6 +123,92 @@
       "custoTotal": 90,
       "id": "70YHa90i7z4",
       "ativo": true
+    },
+    {
+      "data": "2026-11-06T00:48:30.286Z",
+      "itens": [
+        {
+          "produto": {
+            "id": "1",
+            "nome": "Cupcake",
+            "precoVenda": 8,
+            "precoCusto": 4.5,
+            "ativo": true
+          },
+          "quantidade": 100
+        }
+      ],
+      "total": 800,
+      "custoTotal": 450,
+      "ativo": true,
+      "id": "fCkz7uncDRM"
+    },
+    {
+      "data": "2026-11-06T00:48:39.926Z",
+      "itens": [
+        {
+          "produto": {
+            "id": "1",
+            "nome": "Cupcake",
+            "precoVenda": 8,
+            "precoCusto": 4.5,
+            "ativo": true
+          },
+          "quantidade": 10
+        }
+      ],
+      "total": 80,
+      "custoTotal": 45,
+      "ativo": false,
+      "id": "7-BLIvLVDjU"
+    },
+    {
+      "data": "2026-11-06T00:49:34.895Z",
+      "itens": [
+        {
+          "produto": {
+            "id": "1",
+            "nome": "Cupcake",
+            "precoVenda": 8,
+            "precoCusto": 4.5,
+            "ativo": true
+          },
+          "quantidade": 100
+        },
+        {
+          "produto": {
+            "nome": "w",
+            "precoVenda": 39.9,
+            "precoCusto": 23,
+            "ativo": true,
+            "id": "jet7FwxEMe4"
+          },
+          "quantidade": 1
+        }
+      ],
+      "total": 839.9,
+      "custoTotal": 473,
+      "ativo": true,
+      "id": "LCQi1pmaNIU"
+    },
+    {
+      "data": "2026-11-06T00:52:50.989Z",
+      "itens": [
+        {
+          "produto": {
+            "nome": "w",
+            "precoVenda": 39.9,
+            "precoCusto": 23,
+            "ativo": true,
+            "id": "jet7FwxEMe4"
+          },
+          "quantidade": 11
+        }
+      ],
+      "total": 438.9,
+      "custoTotal": 253,
+      "ativo": true,
+      "id": "LJjqfJrq-30"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

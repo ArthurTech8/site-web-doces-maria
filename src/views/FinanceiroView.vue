@@ -6,7 +6,7 @@ import { useProdutoStore } from '@/store/produtoStore'
 import { useVendaStore } from '@/store/vendaStore'
 import { useResumoFinanceiro } from '@/composables/useResumoFinanceiro'
 import { calcularLucroVenda } from '@/utils/calculos'
-import { chaveDoMes } from '@/utils/datas'
+import { chaveDoMes, ordenarMaisRecentes } from '@/utils/datas'
 import {
   descreverItens,
   formatarDataHora,
@@ -44,9 +44,7 @@ const mes = computed({
 const erroCarregamento = computed(() => vendaStore.erro ?? gastoStore.erro)
 
 // Vendas do mês, da mais recente para a mais antiga
-const vendasOrdenadas = computed(() =>
-  [...vendaStore.vendasDoMes].sort((a, b) => b.data.localeCompare(a.data))
-)
+const vendasOrdenadas = computed(() => ordenarMaisRecentes(vendaStore.vendasDoMes))
 
 const colunasGastos: ColunaTabela[] = [
   { chave: 'descricao', titulo: 'Descrição', largura: '2fr', classe: 'texto-forte' },

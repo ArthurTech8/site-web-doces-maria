@@ -163,9 +163,25 @@ body {
   margin-bottom: var(--espaco-6);
 }
 
+/* Grade de cards maiores (ex.: atalhos da tela inicial) */
+.grade-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: var(--espaco-4);
+  margin-bottom: var(--espaco-6);
+}
+
 /* Dentro de grades, o espaçamento vem do gap e não da margem entre cards */
-.grade-indicadores > .card {
+.grade-indicadores > .card,
+.grade-cards > .card {
   margin-top: 0;
+}
+
+/* Título de uma seção da página, fora de um card */
+.secao-titulo {
+  margin: 0 0 var(--espaco-3);
+  font-size: var(--texto-lg);
+  font-weight: 600;
 }
 
 /* Barra de progresso */
@@ -262,6 +278,7 @@ body {
   font: inherit;
   font-size: var(--texto-md);
   font-weight: 600;
+  text-decoration: none; /* permite usar .botao em links (RouterLink) */
   white-space: nowrap;
   cursor: pointer;
   transition:

@@ -10,6 +10,17 @@ export function formatarPercentual(valor: number): string {
   return `${valor.toLocaleString('pt-BR', { maximumFractionDigits: 1 })}%`
 }
 
+// Data → "Quinta-feira, 5 de novembro de 2026"
+export function formatarDataPorExtenso(data: Date): string {
+  const texto = data.toLocaleDateString('pt-BR', {
+    weekday: 'long',
+    day: 'numeric',
+    month: 'long',
+    year: 'numeric',
+  })
+  return texto.charAt(0).toUpperCase() + texto.slice(1)
+}
+
 // "2026-11" → "novembro de 2026"
 export function formatarMes(chaveMes: string): string {
   const [ano, mes] = chaveMes.split('-').map(Number)

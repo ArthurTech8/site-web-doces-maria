@@ -3,7 +3,7 @@ import { RouterLink } from 'vue-router'
 
 // Para adicionar uma tela no menu, inclua o nome da rota (definido em router/index.ts)
 const links = [
-  { rota: 'home', texto: 'Home' },
+  { rota: 'home', texto: 'Início' },
   { rota: 'nova-venda', texto: 'Nova Venda' },
   { rota: 'produtos', texto: 'Produtos' },
   { rota: 'financeiro', texto: 'Financeiro' },

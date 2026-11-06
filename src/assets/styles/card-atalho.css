@@ -1,0 +1,65 @@
+/* Estilos do componente CardAtalho.vue (importado com <style scoped src>) */
+
+.atalho {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espaco-1);
+  color: var(--cor-texto);
+  text-decoration: none;
+  transition:
+    transform 0.15s,
+    box-shadow 0.15s,
+    border-color 0.15s;
+}
+
+.atalho:hover {
+  border-color: var(--cor-primaria);
+  box-shadow: var(--sombra-modal);
+  transform: translateY(-2px);
+}
+
+.atalho:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px var(--cor-primaria-clara);
+}
+
+.atalho-icone {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  margin-bottom: var(--espaco-2);
+  border-radius: var(--raio-md);
+  background-color: var(--cor-primaria-clara);
+  font-size: 22px;
+}
+
+.atalho-titulo {
+  font-size: var(--texto-lg);
+  font-weight: 600;
+}
+
+.atalho-descricao {
+  color: var(--cor-texto-suave);
+  font-size: var(--texto-sm);
+}
+
+/* Atalho principal: fundo na cor primária */
+.atalho-destaque {
+  border-color: var(--cor-primaria);
+  background-color: var(--cor-primaria);
+  color: var(--cor-texto-invertido);
+}
+
+.atalho-destaque:hover {
+  border-color: var(--cor-primaria-escura);
+  background-color: var(--cor-primaria-escura);
+}
+
+.atalho-destaque .atalho-icone {
+  background-color: var(--cor-superficie);
+}
+
+.atalho-destaque .atalho-descricao {
+  color: var(--cor-primaria-clara);
+}

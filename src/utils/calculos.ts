@@ -34,6 +34,11 @@ export function calcularLucroVenda(venda: Venda): number {
   return venda.total - venda.custoTotal
 }
 
+// Quantidade de itens de uma venda (ex.: 10 cupcakes + 2 brigadeiros = 12)
+export function calcularQuantidadeVenda(venda: Venda): number {
+  return somar(venda.itens, item => item.quantidade)
+}
+
 // Quantos itens precisam ser vendidos para gerar um valor de lucro.
 // Retorna null quando o lucro por item não é positivo (nunca alcançaria o valor)
 export function calcularItensNecessarios(valor: number, lucroPorItem: number): number | null {
