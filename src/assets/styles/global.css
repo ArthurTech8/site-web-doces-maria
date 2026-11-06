@@ -141,10 +141,56 @@ body {
   font-size: var(--texto-xl);
 }
 
-/* Formulários */
+/* Cabeçalho de card: título à esquerda, contador ou ações à direita */
+.card-cabecalho {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--espaco-4);
+  padding: var(--espaco-4) var(--espaco-6);
+  border-bottom: 1px solid var(--cor-borda);
+}
+
+.card-cabecalho .card-titulo {
+  margin: 0;
+}
+
+/* Grade de cards de indicadores (dashboard) */
+.grade-indicadores {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: var(--espaco-4);
+  margin-bottom: var(--espaco-6);
+}
+
+/* Dentro de grades, o espaçamento vem do gap e não da margem entre cards */
+.grade-indicadores > .card {
+  margin-top: 0;
+}
+
+/* Barra de progresso */
+.progresso {
+  height: 10px;
+  overflow: hidden;
+  border-radius: var(--raio-pilula);
+  background-color: var(--cor-borda-suave);
+}
+
+.progresso-barra {
+  height: 100%;
+  border-radius: var(--raio-pilula);
+  background-color: var(--cor-primaria);
+  transition: width 0.3s;
+}
+
+.progresso-barra-completa {
+  background-color: var(--cor-sucesso-borda);
+}
+
+/* Formulários (as colunas podem mudar com a variável --colunas-formulario) */
 .formulario-grade {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-columns: var(--colunas-formulario, 2fr 1fr 1fr);
   gap: var(--espaco-4);
 }
 
@@ -351,6 +397,11 @@ body {
   color: var(--cor-texto-suave);
 }
 
+.texto-sucesso {
+  color: var(--cor-sucesso);
+  font-weight: 600;
+}
+
 .texto-aviso {
   color: var(--cor-alerta);
   font-weight: 600;
@@ -393,7 +444,8 @@ body {
   }
 
   .card-corpo,
-  .card-rodape {
+  .card-rodape,
+  .card-cabecalho {
     padding: var(--espaco-4);
   }
 

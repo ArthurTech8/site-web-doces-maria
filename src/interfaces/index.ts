@@ -1,3 +1,4 @@
+export type { Registro, Novo } from './Registro'
 export type { Produto, NovoProduto } from './Produto'
 export type { GastoFixo, NovoGastoFixo } from './GastoFixo'
 export type { ItemVenda } from './ItemVenda'

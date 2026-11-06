@@ -1,4 +1,4 @@
-import type { ItemVenda, Produto } from '@/interfaces'
+import type { ItemVenda, Produto, Venda } from '@/interfaces'
 
 // Soma um valor de cada item da lista, ex.: somar(gastos, g => g.valor)
 export function somar<T>(lista: T[], valor: (item: T) => number): number {
@@ -28,4 +28,15 @@ export function calcularTotalItens(itens: ItemVenda[]): number {
 
 export function calcularCustoItens(itens: ItemVenda[]): number {
   return somar(itens, item => item.produto.precoCusto * item.quantidade)
+}
+
+export function calcularLucroVenda(venda: Venda): number {
+  return venda.total - venda.custoTotal
+}
+
+// Quantos itens precisam ser vendidos para gerar um valor de lucro.
+// Retorna null quando o lucro por item não é positivo (nunca alcançaria o valor)
+export function calcularItensNecessarios(valor: number, lucroPorItem: number): number | null {
+  if (lucroPorItem <= 0) return null
+  return Math.ceil(valor / lucroPorItem)
 }

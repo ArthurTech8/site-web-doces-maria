@@ -4,24 +4,28 @@
       "id": "1",
       "nome": "Cupcake",
       "precoVenda": 8,
-      "precoCusto": 4.5
+      "precoCusto": 4.5,
+      "ativo": true
     }
   ],
   "gastosFixos": [
     {
       "id": "1",
       "descricao": "Internet",
-      "valor": 120
+      "valor": 120,
+      "ativo": true
     },
     {
       "id": "2",
       "descricao": "Luz",
-      "valor": 230
+      "valor": 230,
+      "ativo": true
     },
     {
       "id": "3",
       "descricao": "Água",
-      "valor": 90
+      "valor": 90,
+      "ativo": true
     }
   ],
   "vendas": [
@@ -40,7 +44,8 @@
         }
       ],
       "total": 80,
-      "custoTotal": 45
+      "custoTotal": 45,
+      "ativo": true
     },
     {
       "data": "2026-11-06T00:22:19.055Z",
@@ -57,7 +62,8 @@
       ],
       "total": 40,
       "custoTotal": 22.5,
-      "id": "sf43C4itXP8"
+      "id": "sf43C4itXP8",
+      "ativo": true
     },
     {
       "data": "2026-11-06T00:22:43.248Z",
@@ -74,7 +80,8 @@
       ],
       "total": 160,
       "custoTotal": 90,
-      "id": "70YHa90i7z4"
+      "id": "70YHa90i7z4",
+      "ativo": true
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

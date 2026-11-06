@@ -50,7 +50,8 @@ async function salvarProduto(dados: NovoProduto) {
   erroFormulario.value = null
   try {
     if (produtoEmEdicao.value) {
-      await produtoStore.editarProduto({ ...dados, id: produtoEmEdicao.value.id })
+      // Parte do registro original (mantém id e ativo) e aplica os campos do formulário
+      await produtoStore.editarProduto({ ...produtoEmEdicao.value, ...dados })
       produtoEmEdicao.value = null
     } else {
       await produtoStore.adicionarProduto(dados)
@@ -70,7 +71,7 @@ const erroExclusao = ref<string | null>(null)
 
 const mensagemExclusao = computed(() =>
   produtoParaExcluir.value
-    ? `O produto "${produtoParaExcluir.value.nome}" será removido da lista. As vendas já registradas não são alteradas.`
+    ? `O produto "${produtoParaExcluir.value.nome}" ficará inativo e não aparecerá mais nas listas nem na Nova Venda. O registro continua salvo no banco de dados, e as vendas já registradas não são alteradas.`
     : ''
 )
 

@@ -1,24 +1,26 @@
 import api from './api'
+import type { Novo, Registro } from '@/interfaces'
 
 // Operações padrão de um recurso da API.
-// T = registro salvo (com id) | N = registro novo (sem id)
-export interface ServicoCrud<T, N> {
+// Nenhum registro é apagado: "inativar" marca ativo = false e "listar" não devolve inativos.
+export interface ServicoCrud<T extends Registro> {
   listar(): Promise<T[]>
-  criar(novo: N): Promise<T>
+  criar(novo: Novo<T>): Promise<T>
   atualizar(item: T): Promise<T>
-  excluir(id: string): Promise<void>
+  inativar(id: string): Promise<void>
 }
 
-// Cria as operações de CRUD para um recurso, ex.: criarServicoCrud<Produto, NovoProduto>('/produtos')
-export function criarServicoCrud<T extends { id: string }, N>(recurso: string): ServicoCrud<T, N> {
+// Cria as operações de CRUD para um recurso, ex.: criarServicoCrud<Produto>('/produtos')
+export function criarServicoCrud<T extends Registro>(recurso: string): ServicoCrud<T> {
   return {
     async listar() {
       const resposta = await api.get<T[]>(recurso)
-      return resposta.data
+      // Registros sem o campo "ativo" (criados antes dessa regra) contam como ativos
+      return resposta.data.filter(item => item.ativo !== false)
     },
 
     async criar(novo) {
-      const resposta = await api.post<T>(recurso, novo)
+      const resposta = await api.post<T>(recurso, { ...novo, ativo: true })
       return resposta.data
     },
 
@@ -27,8 +29,8 @@ export function criarServicoCrud<T extends { id: string }, N>(recurso: string): 
       return resposta.data
     },
 
-    async excluir(id) {
-      await api.delete(`${recurso}/${id}`)
+    async inativar(id) {
+      await api.patch(`${recurso}/${id}`, { ativo: false })
     },
   }
 }

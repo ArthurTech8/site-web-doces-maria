@@ -1,7 +1,8 @@
-export interface GastoFixo {
-  id: string
+import type { Novo, Registro } from './Registro'
+
+export interface GastoFixo extends Registro {
   descricao: string
   valor: number
 }
 
-export type NovoGastoFixo = Omit<GastoFixo, 'id'>
+export type NovoGastoFixo = Novo<GastoFixo>

@@ -1,4 +1,4 @@
-import type { Venda, NovaVenda } from '@/interfaces'
+import type { Venda } from '@/interfaces'
 import { criarServicoCrud } from './crudService'
 
-export const vendaService = criarServicoCrud<Venda, NovaVenda>('/vendas')
+export const vendaService = criarServicoCrud<Venda>('/vendas')
