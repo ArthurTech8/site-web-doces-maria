@@ -63,6 +63,22 @@ body {
   color: var(--cor-perigo);
 }
 
+.alerta-sucesso {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--espaco-2) var(--espaco-4);
+  border-left: 4px solid var(--cor-sucesso-borda);
+  background-color: var(--cor-sucesso-fundo);
+  color: var(--cor-sucesso);
+}
+
+.alerta a {
+  color: inherit;
+  font-weight: 600;
+}
+
 /* Card */
 .card {
   overflow: hidden;
@@ -85,6 +101,44 @@ body {
   margin: 0 0 var(--espaco-4);
   font-size: var(--texto-lg);
   font-weight: 600;
+}
+
+/* Rodapé de card: totais e botões abaixo de uma tabela */
+.card-rodape {
+  padding: var(--espaco-4) var(--espaco-6);
+  border-top: 1px solid var(--cor-borda);
+  background-color: var(--cor-superficie-suave);
+}
+
+.resumo {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: var(--espaco-6);
+}
+
+.resumo-item {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.resumo-rotulo {
+  color: var(--cor-texto-suave);
+  font-size: var(--texto-xs);
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.resumo-valor {
+  font-size: var(--texto-lg);
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+.resumo-valor-destaque {
+  color: var(--cor-primaria);
+  font-size: var(--texto-xl);
 }
 
 /* Formulários */
@@ -338,7 +392,8 @@ body {
     padding: var(--espaco-4);
   }
 
-  .card-corpo {
+  .card-corpo,
+  .card-rodape {
     padding: var(--espaco-4);
   }
 

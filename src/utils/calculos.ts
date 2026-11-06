@@ -18,8 +18,12 @@ export function calcularMargem(produto: Precos): number {
   return (calcularLucroUnitario(produto) / produto.precoVenda) * 100
 }
 
+export function calcularSubtotalItem(item: ItemVenda): number {
+  return item.produto.precoVenda * item.quantidade
+}
+
 export function calcularTotalItens(itens: ItemVenda[]): number {
-  return somar(itens, item => item.produto.precoVenda * item.quantidade)
+  return somar(itens, calcularSubtotalItem)
 }
 
 export function calcularCustoItens(itens: ItemVenda[]): number {
